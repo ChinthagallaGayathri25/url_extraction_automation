@@ -150,10 +150,25 @@ if uploaded_files:
             mime="application/zip"
         )
 
-st.sidebar.title("ℹ️ How It Works")
-st.sidebar.write("""
-✅ Correct full URLs  
-✅ Works for file4.txt structure  
-✅ UI & Excel consistent  
-✅ One row per file in combined Excel  
+st.sidebar.title("ℹ️ How This App Works")
+
+st.sidebar.markdown("""
+### Step 1: Upload Log Files
+- Upload one or more `.txt` or `.log` files using the upload button.
+- Each file is processed independently.
+
+### Step 2: Extract URLs
+- Click the **Extract URLs** button.
+- The app scans the logs and finds URLs containing `loadAccessToken`.
+
+### Step 3: View Extracted URLs
+- Extracted URLs are displayed file‑wise on the screen.
+- You can expand each file section to view all URLs.
+
+### Step 4: Download Output
+- Click **Download ZIP** to get the results.
+- The ZIP file contains:
+    - One Excel file per uploaded log
+    - A combined Excel file (URLs grouped by file)
+    - A summary Excel file (URL count per file)
 """)
